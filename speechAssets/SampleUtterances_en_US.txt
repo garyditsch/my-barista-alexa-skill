@@ -1,14 +1,12 @@
-GetNewFactIntent a fact
-GetNewFactIntent a space fact
-GetNewFactIntent tell me a fact
-GetNewFactIntent tell me a space fact
-GetNewFactIntent give me a fact
-GetNewFactIntent give me a space fact
-GetNewFactIntent tell me trivia
-GetNewFactIntent tell me a space trivia
-GetNewFactIntent give me trivia
-GetNewFactIntent give me a space trivia
-GetNewFactIntent give me some information
-GetNewFactIntent give me some space information
-GetNewFactIntent tell me something
-GetNewFactIntent give me something
+GetCustomerDrink what drink I should order today
+GetCustomerDrink what drink I should order
+GetCustomerDrink how to make my latte
+GetCustomerDrink what latte I should have
+GetCustomerDrink what latte I should drink today
+GetCustomerDrink what kind of latte I should order
+GetCustomerDrink what kind of coffe should I have
+GetCustomerDrink what is my drink today
+GetCustomerDrink to make me a drink
+GetCustomerDrink for a drink 
+GetCustomerDrink for a drink choice
+GetCustomerDrink what drink I should order

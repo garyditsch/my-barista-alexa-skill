@@ -1,80 +1,90 @@
 'use strict';
 var Alexa = require('alexa-sdk');
-var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
+var APP_ID = 'amzn1.ask.skill.180950b4-ebb3-4eb2-ab17-f05cea745148'
+
 
 var languageStrings = {
-    "en-GB": {
-        "translation": {
-            "FACTS": [
-                "A year on Mercury is just 88 days long.",
-                "Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.",
-                "Venus rotates anti-clockwise, possibly because of a collision in the past with an asteroid.",
-                "On Mars, the Sun appears about half the size as it does on Earth.",
-                "Earth is the only planet not named after a god.",
-                "Jupiter has the shortest day of all the planets.",
-                "The Milky Way galaxy will collide with the Andromeda Galaxy in about 5 billion years.",
-                "The Sun contains 99.86% of the mass in the Solar System.",
-                "The Sun is an almost perfect sphere.",
-                "A total solar eclipse can happen once every 1 to 2 years. This makes them a rare event.",
-                "Saturn radiates two and a half times more energy into space than it receives from the sun.",
-                "The temperature inside the Sun can reach 15 million degrees Celsius.",
-                "The Moon is moving approximately 3.8 cm away from our planet every year."
-            ],
-            "SKILL_NAME" : "British Space Facts",
-            "GET_FACT_MESSAGE" : "Here's your fact: ",
-            "HELP_MESSAGE" : "You can say tell me a space fact, or, you can say exit... What can I help you with?",
-            "HELP_REPROMPT" : "What can I help you with?",
-            "STOP_MESSAGE" : "Goodbye!"
-        }
-    },
     "en-US": {
         "translation": {
-            "FACTS": [
-                "A year on Mercury is just 88 days long.",
-                "Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.",
-                "Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.",
-                "On Mars, the Sun appears about half the size as it does on Earth.",
-                "Earth is the only planet not named after a god.",
-                "Jupiter has the shortest day of all the planets.",
-                "The Milky Way galaxy will collide with the Andromeda Galaxy in about 5 billion years.",
-                "The Sun contains 99.86% of the mass in the Solar System.",
-                "The Sun is an almost perfect sphere.",
-                "A total solar eclipse can happen once every 1 to 2 years. This makes them a rare event.",
-                "Saturn radiates two and a half times more energy into space than it receives from the sun.",
-                "The temperature inside the Sun can reach 15 million degrees Celsius.",
-                "The Moon is moving approximately 3.8 cm away from our planet every year."
+            "DRINKS": [
+                "A small brewed coffee.",
+                "A medium brewed coffee.",
+                "A large brewed coffee.",
+                "A french press",
+                "A pour over",
+                "A chemex",
+                "A small cold brew",
+                "A medium cold brew",
+                "A large cold brew",
+                "A small espresso",
+                "A medium espresso",
+                "A small single origin",
+                "A medium single origin",
+                "A small americano",
+                "A medium americano",
+                "A large americano",
+                "A small latte",
+                "A medium latte",
+                "A large latte",
+                "A cappuccino",
+                "A small mocha",
+                "A medium mocha",
+                "A large mocha",
+                "A small maacchiato",
+                "A small brewshine",
+                "A medium brewshine",
+                "A large brewshine",
+                "A small hot chocolate",
+                "A medium hot chocolate",
+                "A large hot chocolate",
+                "A small steamer",
+                "A medium steamer",
+                "A large steamer",
+                "A small Italian soda",
+                "A medium Italian soda",
+                "A large Italian soda",
+                "A tea", 
+                "A small iced tea",
+                "A medium iced tea", 
+                "A large iced tea",
+                "A small chai latte", 
+                "A medium chai latte", 
+                "A large chai latte", 
+                "A medium smoothie", 
+                "A large smoothie", 
+                "A matcha latte"
             ],
-            "SKILL_NAME" : "American Space Facts",
-            "GET_FACT_MESSAGE" : "Here's your fact: ",
-            "HELP_MESSAGE" : "You can say tell me a space fact, or, you can say exit... What can I help you with?",
+            "SKILL_NAME" : "My Barista",
+            "GET_DRINK_MESSAGE" : "Here's your drink suggestion for today: ",
+            "HELP_MESSAGE" : "You can as me for a drink suggestion, or, you can say exit... What can I help you with?",
             "HELP_REPROMPT" : "What can I help you with?",
-            "STOP_MESSAGE" : "Goodbye!"
+            "STOP_MESSAGE" : "Goodbye!",
+            "UNSURE_MESSAGE" : "I am sorry, but I am not sure what you asked me."
         }
     },
     "de-DE": {
         "translation": {
-            "FACTS": [
-                "Ein Jahr dauert auf dem Merkur nur 88 Tage.",
-                "Die Venus ist zwar weiter von der Sonne entfernt, hat aber höhere Temperaturen als Merkur.",
-                "Venus dreht sich entgegen dem Uhrzeigersinn, möglicherweise aufgrund eines früheren Zusammenstoßes mit einem Asteroiden.",
-                "Auf dem Mars erscheint die Sonne nur halb so groß wie auf der Erde.",
-                "Die Erde ist der einzige Planet, der nicht nach einem Gott benannt ist.",
-                "Jupiter hat den kürzesten Tag aller Planeten.",
-                "Die Milchstraßengalaxis wird in etwa 5 Milliarden Jahren mit der Andromeda-Galaxis zusammenstoßen.",
-                "Die Sonne macht rund 99,86 % der Masse im Sonnensystem aus.",
-                "Die Sonne ist eine fast perfekte Kugel.",
-                "Eine Sonnenfinsternis kann alle ein bis zwei Jahre eintreten. Sie ist daher ein seltenes Ereignis.",
-                "Der Saturn strahlt zweieinhalb mal mehr Energie in den Weltraum aus als er von der Sonne erhält.",
-                "Die Temperatur in der Sonne kann 15 Millionen Grad Celsius erreichen.",
-                "Der Mond entfernt sich von unserem Planeten etwa 3,8 cm pro Jahr."
-            ],
-            "SKILL_NAME" : "Weltraumwissen auf Deutsch",
-            "GET_FACT_MESSAGE" : "Hier sind deine Fakten: ",
-            "HELP_MESSAGE" : "Du kannst sagen, „Nenne mir einen Fakt über den Weltraum“, oder du kannst „Beenden“ sagen... Wie kann ich dir helfen?",
-            "HELP_REPROMPT" : "Wie kann ich dir helfen?",
-            "STOP_MESSAGE" : "Auf Wiedersehen!"
+            "DRINKS": [],
+            "SKILL_NAME" : "My Barista",
+            "GET_DRINK_MESSAGE" : "Here's your drink suggestion for today: ",
+            "HELP_MESSAGE" : "You can as me for a drink suggestion, or, you can say exit... What can I help you with?",
+            "HELP_REPROMPT" : "What can I help you with?",
+            "STOP_MESSAGE" : "Goodbye!",
+            "UNSURE_MESSAGE" : "I am sorry, but I am not sure what you asked me."
         }
-    }
+    },
+    "en-GB": {
+        "translation": {
+            "DRINKS": [
+            ],
+            "SKILL_NAME" : "My Barista",
+            "GET_DRINK_MESSAGE" : "Here's your drink suggestion for today: ",
+            "HELP_MESSAGE" : "You can as me for a drink suggestion, or, you can say exit... What can I help you with?",
+            "HELP_REPROMPT" : "What can I help you with?",
+            "STOP_MESSAGE" : "Goodbye!",
+            "UNSURE_MESSAGE" : "I am sorry, but I am not sure what you asked me."
+        }
+    },
 };
 
 exports.handler = function(event, context, callback) {
@@ -88,21 +98,21 @@ exports.handler = function(event, context, callback) {
 
 var handlers = {
     'LaunchRequest': function () {
-        this.emit('GetFact');
+        this.emit('GetDrink');
     },
-    'GetNewFactIntent': function () {
-        this.emit('GetFact');
+    'GetCustomerDrink': function () {
+        this.emit('GetDrink');
     },
-    'GetFact': function () {
-        // Get a random space fact from the space facts list
+    'GetDrink': function () {
+        // Get a random drink from the drink list
         // Use this.t() to get corresponding language data
-        var factArr = this.t('FACTS');
-        var factIndex = Math.floor(Math.random() * factArr.length);
-        var randomFact = factArr[factIndex];
+        var drinkArr = this.t('DRINKS');
+        var drinkIndex = Math.floor(Math.random() * drinkArr.length);
+        var randomDrink = drinkArr[drinkIndex];
 
         // Create speech output
-        var speechOutput = this.t("GET_FACT_MESSAGE") + randomFact;
-        this.emit(':tellWithCard', speechOutput, this.t("SKILL_NAME"), randomFact)
+        var speechOutput = this.t("GET_DRINK_MESSAGE") + randomDrink;
+        this.emit(':tellWithCard', speechOutput, this.t("SKILL_NAME"), randomDrink)
     },
     'AMAZON.HelpIntent': function () {
         var speechOutput = this.t("HELP_MESSAGE");
@@ -114,5 +124,8 @@ var handlers = {
     },
     'AMAZON.StopIntent': function () {
         this.emit(':tell', this.t("STOP_MESSAGE"));
-    }
+    },
+    'Unhandled': function () {
+    this.emit(':ask', this.t("UNSURE_MESSAGE"));
+    },
 };
